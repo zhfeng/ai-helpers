@@ -1,10 +1,9 @@
 FROM registry.ci.openshift.org/ocp/builder:rhel-9-golang-1.25-openshift-4.22
 
-# Install Python 3 and development tools
+# Install Python 3
 RUN dnf install -y \
     python3 \
     python3-pip \
-    python3-devel \
     && dnf clean all
 
 # Install common Python tools
